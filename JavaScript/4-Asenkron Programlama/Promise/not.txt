@@ -1,0 +1,1 @@
+Promise, kod üreten ve kod tüketen arasında bağlantı kuran bir JavaScript nesnesidir.

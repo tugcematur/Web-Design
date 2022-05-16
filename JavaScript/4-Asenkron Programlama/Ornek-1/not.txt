@@ -1,0 +1,75 @@
+
+Senkron Ve Asenkron Programlama Nedir?
+
+Senkron programlamadaki her şeyi sırayla işlemesi ve her bir işlemin birbirini beklemesi yeri geldiğinde 
+programımızı çok yavaşlatabilir, hatta işlem bitene kadar durdurabilir.
+
+
+
+Senkron Programlama
+
+Yazdığımız programların çoğu yazmış olduğumuz kodları yazılış sırasına göre yukarıdan aşağıya doğru işleyerek ilerler. Her şey sıra ile yapılır. 
+Örneğin bir önceki bölümde yazmış olduğumuz şu kod buna bir örnektir:
+
+
+
+
+
+
+
+var fs=require("fs");
+
+var data=fs.readFileSync(process.argv[2]);
+
+console.log(“Program çalışıyor...”);
+
+var satirlar=data.toString().split("\n");
+
+console.log(satirlar.length);
+
+
+
+
+
+5 satırda sırasıyla işler: fs modülünü çağır, dosya içeriğini al, ekrana “Program çalışıyor…” yaz, satırları hesapla, satır sayısını ekrana yaz.
+ Hiçbir işlem birbirinin önüne geçemez. Ve birbirini beklemek zorundadır. 
+Sırayla, senkron bir şekilde işlemek zorundadır. Bu tip programlama metoduna Senkron Programlama denir.
+
+
+
+
+
+Asenkron Programlama
+
+Senkron programlamadaki her şeyi sırayla işlemesi ve her bir işlemin birbirini beklemesi yeri geldiğinde programımızı çok yavaşlatabilir, 
+hatta işlem bitene kadar durdurabilir. Örneğin yukarıdaki kodda 3. satır bir önceki satırı yani dosya okuma işlemini beklemek zorundadır.
+ Dosya içeriği çok büyükse bu işlemler dakikalar bile alabilir. Ekrana “Program çalışıyor…” yazdırmak için bir önceki işlemin bitmesini beklemek pek akıllıca değil. 
+ İşte bu tip durumlar için asenkron fonksiyonlar kullanırız. Kod akışının sırayla işlemediği, işlemlerin birbirini beklemediği, 
+kod akışının işlem durumlarına göre devam ettiği programlamaya Asenkron Programlama denir.
+
+
+
+
+
+Javascript Asenkron mu Yoksa Senkron mu Çalışır?
+
+Javascript single-thread ve asenkron yapıda çalışan bir programlama dilir. Aslında bu konu uzun uzun anlatılması gereken bir konu fakat kısaca şu şekilde açıklama yapalım.
+ Javascript single-thread çalıştırma yaptığı için çalıştırdığı eventleri ve callback leri sıraya sokarak hepsini tek bir thread ile işler. 
+ Bahsedilen Event’lerin ve Callback’lerin sırada tutulduğu yapı, basit bir kuyruk (Queue) mekanizmasıdır. Thread’in her defasında kuyruktaki ilk Event’i işleyip yeni 
+ bir Event alması da Event Loop olarak adlandırılır.
+ Javascript Run-to-Completion adı verilen, elindeki işi tamamlamadan başka bir işe geçmeyen bir mekanizmaya sahiptir.
+
+
+
+ Callback Function Nedir?
+
+Asenkronik yapı içerisinde callback function kilit noktadır. Callback function başka bir fonksiyonun çalışmasını tamamladıktan sonra, bir başka fonksiyonun işlevini başlatır.
+ Daha karmaşık bir şekilde ifade etmek gerekirse: JavaScript'te işlevler nesnelerdir. 
+Bu nedenle, işlevler işlevleri bağımsız değişken olarak alabilir ve diğer işlevler tarafından döndürülebilir. Bunu yapan işlevlere üst düzey işlevler denir.
+ Bağımsız değişken olarak iletilen herhangi bir işleve callback function denir. 
+
+Callback Function nasıl çalışır?
+
+Fonksiyonları değişkenler gibi diğer fonksiyonlara aktarabilir ve bu aktardığınız fonksiyonları da bir başka fonksiyona aktarıp kullanabilirsiniz.
+ Bir callback fonksiyonunu bir fonksiyona argüman olarak verdiğimizde yalnızca fonksiyon aktarılır. Fonksiyonlar parametrede çalıştırılmaz. 
+ Ve callback gönderdiğimiz fonksiyon callback fonksiyonuna sahip olduğu için callback işlemini istediği zaman yapabilir.
