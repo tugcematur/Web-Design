@@ -1,0 +1,2 @@
+component ve props mantığı anlatıldı 
+Fonksiyonlar da değişken gibi kullanılır 

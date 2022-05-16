@@ -1,0 +1,13 @@
+﻿-> Core with React JS projesi 
+
+Nuggettan paketleri yükledik  -> 5.0.16
+CoreEntityFramework 
+Core Tools
+Sql Sever
+
+React ClientApp de değişiklik yapmak istiyorsak clientApp in içinde 
+cd ClientApp
+
+pwd komutu -> hangi dosya yolunda olduğunu gösterir
+
+migration yapıcaz 
