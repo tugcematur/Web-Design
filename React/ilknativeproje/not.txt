@@ -1,0 +1,6 @@
+["flex-start","flex-end","center","stretch","baseline"] mobilde kullanılabilenler
+r ye bas günceleme yaptığında 
+
+https://book-store-api-test.herokuapp.com/
+
+https://api-bookseller.herokuapp.com/
