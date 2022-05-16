@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-radius: 10px;
+            border-collapse: collapse;       /* çift kenarlı olması özelliğini daraltır*/
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>                                     <!--Kolonların özellikleri ayarlanır.-->
+            <col span="0" style="background-color:blue">
+            <col span="1" style="background-color:red">
+            <col span="2" style="background-color:yellow">
+        </colgroup>
+        <thead>
+            <!-- Başlıktır, HTML tablosunun başlık içeriğini gruplandımak için kullanılır.-->
+
+            <tr>
+                <th>Id</th>               <!--Başlık bilgilerini içeren hücreler: Varsayılan olarak kalın ve merkeze hizalanır.-->
+                <th>Ad</th>
+                <th>Soyad</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!--Gövde-->
+
+            <tr>
+                <!--Satır-->
+                <td>1</td>              <!--Verileri içeren hücreler: Varsayılan olarak sola hizalanır.-->
+                <td>Şamil</td>
+                <td>Yılmaz</td>
+            </tr>
+            <tr>
+                <!--Satır-->
+                <td>2</td>
+                <td>Selen</td>
+                <td>Yılmaz</td>
+            </tr>
+
+            <tr>
+                <!--Satır-->
+                <td>3</td>
+                <td>Türker</td>
+                <td>Yılmaz</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol>     <!--order list-->
+        <li>Çay</li>
+        <li>Kahve</li>
+    </ol>
+
+    <ul>    <!--unorder list-->
+        <li>Elma</li>
+        <li>Armut</li>
+    </ul>
+</body>
+</html>

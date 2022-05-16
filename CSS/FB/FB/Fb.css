@@ -1,0 +1,32 @@
+﻿body {
+}
+.fb{                                                                /*. dersek class açar*/
+     background-color:yellow;                                /* classları her etikette kullanabiliriz!*/
+     color:blue;
+     border-color:blue;
+     border-style:groove;
+}
+.bt{
+    background-color:darkgrey;
+    color:black;
+    border-bottom-color:dimgray;
+   
+}
+
+                                                       /*Html öğesi için benzersiz bir kimlik belirtir. 
+                                                      id özelliği, bir stil sayfasındaki belirli bir stil bildirimine işaret etmek için kullanılır.
+                                                      Ayrıca JavaScript tarafından belirli bir kimliğe sahip öğeye erişmek ve bunları işlemek için kullanılır. */
+#myId {
+                                                         
+    background-color:yellow;
+    color: blue;
+    font-family:fantasy;
+    font-size:50px;
+    border-style:dotted;
+    border-left-color:blue;
+    border-right-color:blue;
+    border-bottom-color:blue;
+    padding:40px;
+    margin-inline:200px;
+    
+}

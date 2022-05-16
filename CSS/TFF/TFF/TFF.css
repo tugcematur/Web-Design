@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.flex-end {                    
+    background-color: pink;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.team{
+    font-family:Arial; 
+    border-style:solid;
+
+}
+
+.team-fb{
+    background-color:yellow;
+    color:blue;
+    border-color:blue;
+}
+.gs{
+    background-color:darkred;
+    color:yellow;
+    border-color:yellow;
+}
+
+.bjk{
+    background-color:black;
+    color:white;
+    border-color:white;
+}
+
+

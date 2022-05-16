@@ -1,0 +1,13 @@
+﻿body {
+}
+h2{
+    color:darkred;
+    
+}
+div{
+    background-color:darkgoldenrod;
+    font-family:Verdana;
+    font-size:20px;
+    padding:10px;
+    margin:10px;
+}
